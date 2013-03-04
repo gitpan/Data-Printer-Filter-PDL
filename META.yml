@@ -1,0 +1,26 @@
+---
+abstract: 'Filter for L<Data::Printer> that handles L<PDL> data.'
+author:
+  - 'Zakariyya Mughal <zmughal@cpan.org>'
+build_requires:
+  Data::Printer: 0
+  PDL: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Data-Printer-Filter-PDL
+requires:
+  Data::Printer::Filter: 0
+  Term::ANSIColor: 0
+  strict: 0
+  warnings: 0
+resources:
+  homepage: https://github.com/zmughal/Data-Printer-Filter-PDL
+  repository: https://github.com/zmughal/Data-Printer-Filter-PDL.git
+version: 0.001

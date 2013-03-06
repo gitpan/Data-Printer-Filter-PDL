@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Data-Printer-Filter-PDL,
-version 0.001:
+version 0.002:
 
   Filter for L<Data::Printer> that handles L<PDL> data.
 

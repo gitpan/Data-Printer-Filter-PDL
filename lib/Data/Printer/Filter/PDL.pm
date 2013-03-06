@@ -1,6 +1,6 @@
 package Data::Printer::Filter::PDL;
 {
-  $Data::Printer::Filter::PDL::VERSION = '0.001';
+  $Data::Printer::Filter::PDL::VERSION = '0.002';
 }
 
 use strict;

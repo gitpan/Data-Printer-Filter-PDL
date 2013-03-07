@@ -1,3 +1,7 @@
+0.003 2013-03-07 00:43:47-0600
+  - added docs on using the 'stringify' option on PDL::Char for
+    Devel::REPL::Plugin::DataPrinter
+
 0.002 2013-03-05 21:45:28-0600
   - fix tests by loading the filter at Data::Printer load time
 

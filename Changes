@@ -1,3 +1,6 @@
+0.004 2013-03-11 06:14:29-0500
+  - add PDL::Complex to list of filtered classes
+
 0.003 2013-03-07 00:43:47-0600
   - added docs on using the 'stringify' option on PDL::Char for
     Devel::REPL::Plugin::DataPrinter

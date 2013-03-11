@@ -23,4 +23,4 @@ requires:
 resources:
   homepage: https://github.com/zmughal/Data-Printer-Filter-PDL
   repository: https://github.com/zmughal/Data-Printer-Filter-PDL.git
-version: 0.003
+version: 0.004

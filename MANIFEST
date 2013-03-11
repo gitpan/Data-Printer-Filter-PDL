@@ -4,7 +4,6 @@ MANIFEST
 META.yml
 Makefile.PL
 README
-TODO
 dist.ini
 lib/Data/Printer/Filter/PDL.pm
 t/01_data_printer.t

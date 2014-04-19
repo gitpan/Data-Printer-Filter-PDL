@@ -1,8 +1,5 @@
 package Data::Printer::Filter::PDL;
-{
-  $Data::Printer::Filter::PDL::VERSION = '0.004';
-}
-
+$Data::Printer::Filter::PDL::VERSION = '0.005';
 use strict;
 use warnings;
 
@@ -13,6 +10,8 @@ filter 'PDL', \&pdl_filter;
 filter 'PDL::Char', \&pdl_filter;
 filter 'PDL::Complex', \&pdl_filter;
 
+use constant MSG_TOOLONG => 'too long to print';
+
 sub pdl_filter {
   my ($self, $props) = @_;
 
@@ -21,10 +20,12 @@ sub pdl_filter {
   #   add new things as [ tag => data ] to @data #
   ################################################
   my @data;
-  if($self->nelem < 10_000) {
+  if($self->nelem <= $PDL::toolongtoprint) { # NOTE this logic is already in PDL, so this may be superfluous
     (my $string = $self->string) =~ s,^\n|\n$,,gs;
     # TODO if PDL::Char also show $p->PDL::string()
     push @data, [ 'Data' => color_pdl_string($props, ['magenta'], $string) ];
+  } else {
+    push @data, [ 'Data' => color_pdl_string($props, ['cyan'], MSG_TOOLONG) ];
   }
 
   # type
@@ -125,6 +126,11 @@ Data::Printer::Filter::PDL - Filter for L<Data::Printer> that handles L<PDL> dat
 
 This module provides formatting for L<PDL> data that can be used to quickly see
 the contents of a L<PDL> variable.
+
+=head1 CONFIGURATION
+
+Modify L<C<$PDL::toolongtoprint>|PDL::Core/PDL::toolongtoprint> to control
+when the contents of piddles with many elements are displayed..
 
 =head1 EXAMPLES
 

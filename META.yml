@@ -9,7 +9,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.133380'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,9 +18,10 @@ name: Data-Printer-Filter-PDL
 requires:
   Data::Printer::Filter: 0
   Term::ANSIColor: 0
+  constant: 0
   strict: 0
   warnings: 0
 resources:
   homepage: https://github.com/zmughal/Data-Printer-Filter-PDL
   repository: https://github.com/zmughal/Data-Printer-Filter-PDL.git
-version: 0.004
+version: 0.005
